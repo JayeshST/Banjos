@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+   
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,600,700,800,900|Poppins:300,400,500,600,700|Playfair+Display:400,400italic,700,700italic,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/swiper.css" type="text/css" />
+
+    <!-- restaurant Demo Specific Stylesheet -->
+    <link rel="stylesheet" href="demos/restaurant/restaurant.css" type="text/css" />
+    <link rel="stylesheet" href="demos/restaurant/css/fonts.css" type="text/css" />
+    <!-- / -->
+
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+>
+
+    <link rel="stylesheet" href="css/colors.php?color=e7272d" type="text/css" />
+
+    <!-- Document Title
+	============================================= -->
+    <title>Banjo's - The Food Chain</title>
+    <link rel="shortcut icon" href="images/banjos.png">
+
+    <style>
+        /* Page Loader CSS */
+        
+        .css3-spinner:before,
+        .pizza .slice:after,
+        .pizza .slice:before {
+            content: ''
+        }
+        
+        .css3-spinner {
+            height: 100vh;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background: #FFF
+        }
+        
+        .css3-spinner:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 15vmin;
+            height: 2vmin;
+            background: #DDD;
+            margin-top: 17.5vmin;
+            -webkit-filter: blur(10px);
+            filter: blur(10px);
+            border-radius: 100%
+        }
+        
+        .pizza {
+            height: 20vmin;
+            width: 20vmin;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background: 0 0;
+            position: relative;
+            -webkit-animation: rotate 13s linear infinite;
+            animation: rotate 13s linear infinite
+        }
+        
+        @-webkit-keyframes rotate {
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+        
+        @keyframes rotate {
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+        
+        .pizza .slice {
+            z-index: -1;
+            overflow: visible;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10vmin 2.75vmin 0;
+            border-color: #ffdc73 transparent transparent;
+            left: 7.5vmin;
+            top: 0;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+            -webkit-animation: loading 1.8125s ease-in-out infinite;
+            animation: loading 1.8125s ease-in-out infinite
+        }
+        
+        @-webkit-keyframes loading {
+            0%,
+            100%,
+            49% {
+                opacity: 1
+            }
+            50%,
+            99% {
+                opacity: 0
+            }
+        }
+        
+        @keyframes loading {
+            0%,
+            100%,
+            49% {
+                opacity: 1
+            }
+            50%,
+            99% {
+                opacity: 0
+            }
+        }
+        
+        .pizza .slice:nth-of-type(2n):after {
+            box-shadow: .5vmin 2.5vmin 0 #cc333f
+        }
+        
+        .pizza .slice:nth-of-type(4n):after {
+            box-shadow: .5vmin 2.5vmin 0 #cc333f, 1.5vmin 5vmin 0 #cc333f
+        }
+        
+        .pizza .slice:nth-of-type(1) {
+            -webkit-transform: rotate(-27.75deg);
+            transform: rotate(-27.75deg);
+            -webkit-animation-delay: -62.5ms;
+            animation-delay: -62.5ms
+        }
+        
+        .pizza .slice:nth-of-type(2) {
+            -webkit-transform: rotate(-55.5deg);
+            transform: rotate(-55.5deg);
+            -webkit-animation-delay: -125ms;
+            animation-delay: -125ms
+        }
+        
+        .pizza .slice:nth-of-type(3) {
+            -webkit-transform: rotate(-83.25deg);
+            transform: rotate(-83.25deg);
+            -webkit-animation-delay: -.1875s;
+            animation-delay: -.1875s
+        }
+        
+        .pizza .slice:nth-of-type(4) {
+            -webkit-transform: rotate(-111deg);
+            transform: rotate(-111deg);
+            -webkit-animation-delay: -.25s;
+            animation-delay: -.25s
+        }
+        
+        .pizza .slice:nth-of-type(5) {
+            -webkit-transform: rotate(-138.75deg);
+            transform: rotate(-138.75deg);
+            -webkit-animation-delay: -.3125s;
+            animation-delay: -.3125s
+        }
+        
+        .pizza .slice:nth-of-type(6) {
+            -webkit-transform: rotate(-166.5deg);
+            transform: rotate(-166.5deg);
+            -webkit-animation-delay: -375ms;
+            animation-delay: -375ms
+        }
+        
+        .pizza .slice:nth-of-type(7) {
+            -webkit-transform: rotate(-194.25deg);
+            transform: rotate(-194.25deg);
+            -webkit-animation-delay: -.4375s;
+            animation-delay: -.4375s
+        }
+        
+        .pizza .slice:nth-of-type(8) {
+            -webkit-transform: rotate(-222deg);
+            transform: rotate(-222deg);
+            -webkit-animation-delay: -.5s;
+            animation-delay: -.5s
+        }
+        
+        .pizza .slice:nth-of-type(9) {
+            -webkit-transform: rotate(-249.75deg);
+            transform: rotate(-249.75deg);
+            -webkit-animation-delay: -.5625s;
+            animation-delay: -.5625s
+        }
+        
+        .pizza .slice:nth-of-type(10) {
+            -webkit-transform: rotate(-277.5deg);
+            transform: rotate(-277.5deg);
+            -webkit-animation-delay: -625ms;
+            animation-delay: -625ms
+        }
+        
+        .pizza .slice:nth-of-type(11) {
+            -webkit-transform: rotate(-305.25deg);
+            transform: rotate(-305.25deg);
+            -webkit-animation-delay: -.6875s;
+            animation-delay: -.6875s
+        }
+        
+        .pizza .slice:nth-of-type(12) {
+            -webkit-transform: rotate(-333deg);
+            transform: rotate(-333deg);
+            -webkit-animation-delay: -.75s;
+            animation-delay: -.75s
+        }
+        
+        .pizza .slice:before {
+            position: absolute;
+            height: 1.5vmin;
+            width: 6vmin;
+            background: #bbb083;
+            top: -10.5vmin;
+            left: -3vmin;
+            border-radius: 100vmin 100vmin .5vmin .5vmin/50vmin
+        }
+        
+        .pizza .slice:after {
+            border-radius: 100%;
+            position: absolute;
+            width: 1.25vmin;
+            height: 1.25vmin;
+            background: #cc333f;
+            left: -1vmin;
+            top: -7vmin;
+            z-index: 2
+        }
+    </style>
+
+    <script>
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+        .htext {
+            white - space: nowrap;
+            overflow: hidden;
+            font - family: 'Source Code Pro', monospace;
+            font - size: 28 px;
+            color: rgba(255, 255, 255, .70);
+        }
+
+        /* Animation */
+        .htext {
+            animation: animated - text 2 s steps(30, end) 1 s 1 normal both;
+        }
+
+        /* text animation */
+
+        @keyframes animated - text {
+            from {
+                width: 0;
+            }
+            to {
+                width: 472 px;
+            }
+        }
+    </script>
+
+</head>
+
+<body class="stretched sticky-footer" data-loader-html="<span class='pizza'> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> <span class='slice'></span> </span>">
+
+
+    <!-- Messenger Chat plugin Code -->
+
+    <div id="fb-root"></div>
+
+      <script>
+
+        window.fbAsyncInit = function() {
+
+          FB.init({
+
+            xfbml            : true,
+
+            version          : 'v10.0'
+
+          });
+
+        };
+
+
+
+        (function(d, s, id) {
+
+          var js, fjs = d.getElementsByTagName(s)[0];
+
+          if (d.getElementById(id)) return;
+
+          js = d.createElement(s); js.id = id;
+
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+
+          fjs.parentNode.insertBefore(js, fjs);
+
+        }(document, 'script', 'facebook-jssdk'));
+
+      </script>
+
+
+
+      <!-- Your Chat plugin code -->
+
+      <div class="fb-customerchat"
+
+        attribution="biz_inbox"
+
+        page_id="293697211053781">
+
+      </div>
+
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Header
+		============================================= -->
+        <header id="header" class="static-sticky transparent-header split-menu clearfix">
+
+            <div id="header-wrap" style="background-image: url('demos/images/sketch-header.png' ); margin-top: -21px;">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+					============================================= -->
+                    <div id="logo">
+                        <a href="index.html" class="standard-logo hidden-xs hidden-sm"><img src="images/banjos.png" style="width: auto; height: 60px; padding-top: 5px" title="Banjos logo"></a>
+                        <a href="index.html" class="retina-logo hidden-xs hidden-sm"><img src="images/banjos.png" style="width: auto; height: 60px; padding-top: 5px" alt="Banjos Logo"></a>
+                        <a href="index.html" class="standard-logo hidden-md hidden-lg"><img src="images/banjos.png" style="width: auto; height: 60px; padding-top: 5px" title="Banjos"></a>
+                         <a href="index.html" class="retina-logo hidden-md hidden-lg"><img src="images/banjos.png" style="width: auto; height: 60px; padding-top: 5px" alt="Banjos Logo"></a>
+                    </div>
+                    <!-- #logo end -->
+
+                     <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu" class="with-arrows clearfix">
+
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    <div>Home</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="our-story.html">
+                                    <div>Our Story</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="menu.html">
+                                    <div>Menu</div>
+                                </a>
+                            </li>
+                            <li>
+                                
+                                
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <a href="our-branches.html">
+                                    <div>Branches</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="order-online.html">
+                                    <div>Order Online</div>
+                                </a>
+                            </li>
+                            <li>
+                                
+                                    
+                                <ul>
+                                    <li>
+                                        
+                                       
+                                        
+                                    </li>
+                                    
+                                    <li>
+                                       
+                                          
+                                        
+                                    </li>
+                                     <li>
+                                        
+                                    </li>
+
+                                   
+
+                                </ul>
+                            </li>
+                            <li>
+                                
+                            </li>
+                        </ul>
+
+                    </nav>
+                    <!-- #primary-menu end -->
+
+
+                </div>
+
+            </div>
+
+
+        </header>
+        <!-- #header end -->
+
+        <!-- Slider
+		============================================= -->
+        <section id="slider" class="swiper_wrapper slider-parallax force-full-screen full-screen clearfix" data-effect="fade" data-loop="true" data-autoplay="6000" data-speed="1400">
+
+            <div class="slider-parallax-inner">
+                <div class="swiper-container swiper-parent">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide" style="background-image: url('images/swiggy.jpg');background-size: 100%; height: 70%; background-position: center center; background-repeat: no-repeat;">
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('images/zomato.jpg'); background-size: 100%; height: 70%; background-position: center center; background-repeat: no-repeat;">
+                        </div>
+                    </div>
+                    <div id="slider-arrow-left"><i class="bi bi-arrow-left"></i></div>
+                    <div id="slider-arrow-right"><i class="bi bi-arrow-right"></i></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Content
+		============================================= -->
+        <section id="content" style="overflow: visible;">
+
+            <div style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('demos/images/sketch.png') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
+
+            <div class="content-wrap">
+
+                <div class="section nomargin clearfix" style="padding: 40px 0; background: url('images/.png') center center no-repeat; background-size: 100% auto">
+                    <div class="container clearfix">
+
+                        <div class="heading-block nobottomborder bottommargin-sm">
+                            <h2 class="font-secondary color nott" style="font-size: 52px;">Our Food Delivery Partners.</h2>
+                        </div>
+
+                        <div class="row clearfix">
+<!--
+                          
+-->
+
+                            <div class="col-md-3 bottommargin-sm">
+                                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                                    <div class="fbox-icon">
+                                        <i class="i-swiggy noborder"></i>
+                                    </div>
+                                    <h3>Swiggy<span class="subtitle"></span></h3>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 bottommargin-sm">
+                                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                                    <div class="fbox-icon">
+                                        <i class="i-zomato noborder"></i>
+                                    </div>
+                                    <h3>Zomato<span class="subtitle"></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('demos/restaurant/images/sketch-header.png') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
+
+        </section>
+        <!-- #content end -->
+
+       <!-- Footer
+        ============================================= -->
+                <footer id="footer" class="dark" style="background: url('demos/images/footer-bg.jpg')  repeat center center / cover; background-size: auto 100%;; padding: 50px 0 22px">
+
+          <div class="na">
+       Made with <span style="color: #e25555;  ">❤</span><b> by JAYESH THOMBARE  </b>
+       </div> 
+       <style >
+         .na{
+          text-align: center;
+         }
+       </style>    
+       
+        </footer>
+        <!-- #footer end -->
+
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Go To Top
+	============================================= -->
+    <div id="gotoTop" class="icon-line-arrow-up"></div>
+
+    <!-- External JavaScripts
+	============================================= -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+    <!-- Footer Scripts
+	============================================= -->
+    <script type="text/javascript" src="js/functions.js"></script>
+
+    <!-- Custom Carousel JS File -->
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('#food-menu-carousel').owlCarousel({
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                items: 1,
+                mouseDrag: false,
+                dotsContainer: '#item-thumb',
+            });
+
+            $('#dessert-menu-carousel').owlCarousel({
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                items: 1,
+                mouseDrag: false,
+                dotsContainer: '#item-thumb1',
+            });
+        });
+    </script>
+
+</body>
+
+</html>
